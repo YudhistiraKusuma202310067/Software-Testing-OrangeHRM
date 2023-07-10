@@ -13,17 +13,17 @@ def driver():
     yield driver
     driver.quit()
 
-def Login(driver):
+def test(driver):
     time.sleep(3)
     driver.find_element(By.NAME, 'username').send_keys('Admin')
     driver.find_element(By.NAME, 'password').send_keys('admin123' + Keys.ENTER)
     time.sleep(3)
 
-def Masuk_Menu_My_Info(driver):
+    # Masuk_Menu_My_Info 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[6]').click()
     time.sleep(3)
 
-def Mengupdate_Personal_Details(driver):
+    # Mengupdate_Personal_Details 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[1]').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div[1]/div/div/div[2]/div[3]/div[2]/input').send_keys(Keys.CONTROL, "a", Keys.DELETE)
@@ -33,7 +33,7 @@ def Mengupdate_Personal_Details(driver):
     time.sleep(3)
     #Tidak bisa pilih dropdown Blood Type
 
-def Mengupdate_Contact_Details(driver):
+    # Mengupdate_Contact_Details 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[2]').click()
     time.sleep(3)
     # Tidak bisa pilih dropdown Country
@@ -41,7 +41,7 @@ def Mengupdate_Contact_Details(driver):
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[4]/button').click()
     time.sleep(3)
 
-def Menambah_Emergency_Contact(driver):
+    # Menambah_Emergency_Contact 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[3]').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/div/button').click()
@@ -53,7 +53,7 @@ def Menambah_Emergency_Contact(driver):
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[3]/button[2]').click()
     time.sleep(3)
 
-def Immigration(driver):
+    # Immigration 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[5]').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/div/button').click()
@@ -68,18 +68,18 @@ def Immigration(driver):
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[3]/button[2]').click()
     time.sleep(3)
 
-def Melihat_Job(driver):
+    # Melihat_Job 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[6]').click()
     time.sleep(3)
 
-def Melihat_Salary(driver):
+    # Melihat_Salary 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[7]').click()
     time.sleep(3)
 
-def Melihat_Tax_Exemptions(driver):
+    # Melihat_Tax_Exemptions 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[8]').click()
     time.sleep(3)
 
-def Melihat_Report_to(driver):
+    # Melihat_Report_to 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[9]').click()
     time.sleep(3)

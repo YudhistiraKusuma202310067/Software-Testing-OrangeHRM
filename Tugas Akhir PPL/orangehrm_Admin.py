@@ -13,34 +13,34 @@ def driver():
     yield driver
     driver.quit()
 
-def Login(driver):
+def test(driver):
     time.sleep(3)
     driver.find_element(By.NAME, 'username').send_keys('Admin')
     driver.find_element(By.NAME, 'password').send_keys('admin123' + Keys.ENTER)
     time.sleep(3)
 
-def Masuk_Menu_Admin(driver):
+    # Masuk_Menu_Admin 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a').click()
     time.sleep(3)
 
-def Mencari_User_menggunakan_username_Benar(driver):
+    # Mencari_User_menggunakan_username_Benar 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/input').send_keys('Aaliyah.Haq')
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[1]').click()
 
-def Mencari_User_menggunakan_username_Salah(driver):
+    # Mencari_User_menggunakan_username_Salah 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/input').send_keys('Udin')
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[1]').click()
 
-def Menampilkan_data_User_tanpa_memasukkan_input_apapun(driver):
+    # Menampilkan_data_User_tanpa_memasukkan_input_apapun 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[1]').click()
 
-def Menambah_User_baru_tanpa_mengisi_input_apapun(driver):
+    # Menambah_User_baru_tanpa_mengisi_input_apapun 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[1]/button').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[3]/button[2]').click()

@@ -13,17 +13,17 @@ def driver():
     yield driver
     driver.quit()
 
-def Login(driver):
+def test(driver):
     time.sleep(3)
     driver.find_element(By.NAME, 'username').send_keys('Admin')
     driver.find_element(By.NAME, 'password').send_keys('admin123' + Keys.ENTER)
     time.sleep(3)
 
-def Masuk_Menu_Leave(driver):
+    # Masuk_Menu_Leave 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[3]/a').click()
     time.sleep(3)
 
-def Mencari_Employee_berdasarkan_rentang_waktu_yang_sesuai(driver):
+    # Mencari_Employee_berdasarkan_rentang_waktu_yang_sesuai 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input').send_keys(Keys.CONTROL, "a", Keys.DELETE)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input').send_keys('2022-01-01')
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div/input').send_keys(Keys.CONTROL, "a", Keys.DELETE)
@@ -32,7 +32,7 @@ def Mencari_Employee_berdasarkan_rentang_waktu_yang_sesuai(driver):
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[3]/button[1]').click()
 
-def Mencari_Employee_berdasarkan_waktu_yang_salah(driver):
+    # Mencari_Employee_berdasarkan_waktu_yang_salah 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input').send_keys(Keys.CONTROL, "a", Keys.DELETE)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input').send_keys('2026-01-01')
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div/input').send_keys(Keys.CONTROL, "a", Keys.DELETE)
@@ -41,7 +41,7 @@ def Mencari_Employee_berdasarkan_waktu_yang_salah(driver):
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[3]/button[1]').click()
 
-def Mencari_Employee_berdasarkan_waktu_yang_tidak_sesuai_format(driver):
+    # Mencari_Employee_berdasarkan_waktu_yang_tidak_sesuai_format 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input').send_keys(Keys.CONTROL, "a", Keys.DELETE)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input').send_keys('Test')
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div/input').send_keys(Keys.CONTROL, "a", Keys.DELETE)
@@ -50,12 +50,12 @@ def Mencari_Employee_berdasarkan_waktu_yang_tidak_sesuai_format(driver):
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[3]/button[1]').click()
 
-def Menampilkan_data_Employee_tanpa_memasukkan_input_apapun_kecuali_rentang_waktu_dan_Status(driver):
+    # Menampilkan_data_Employee_tanpa_memasukkan_input_apapun_kecuali_rentang_waktu_dan_Status 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[3]/button[2]').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[3]/button[1]').click()
 
-def Membuat_Permintaan_Leave_tanpa_mengisi_input_apapun(driver):
+    # Membuat_Permintaan_Leave_tanpa_mengisi_input_apapun 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[1]/header/div[2]/nav/ul/li[7]/a').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[5]/button').click()

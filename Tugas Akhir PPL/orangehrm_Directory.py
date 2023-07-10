@@ -13,21 +13,21 @@ def driver():
     yield driver
     driver.quit()
 
-def Login(driver):
+def test(driver):
     time.sleep(3)
     driver.find_element(By.NAME, 'username').send_keys('Admin')
     driver.find_element(By.NAME, 'password').send_keys('admin123' + Keys.ENTER)
     time.sleep(3)
 
-def Masuk_Menu_Directory(driver):
+    # Masuk_Menu_Directory 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[9]/a').click()
     time.sleep(3)
 
-def Mencari_Employee_tanpa_memasukkan_inpu_apapun(driver):
+    # Mencari_Employee_tanpa_memasukkan_inpu_apapun 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]').click()
     time.sleep(3)
 
-def Melihat_Detail_Employee(driver):
+    # Melihat_Detail_Employee 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div/div[1]').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[9]/a').click()

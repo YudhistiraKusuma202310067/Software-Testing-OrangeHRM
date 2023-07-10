@@ -13,57 +13,57 @@ def driver():
     yield driver
     driver.quit()
 
-def Login(driver):
+def test(driver):
     time.sleep(3)
     driver.find_element(By.NAME, 'username').send_keys('Admin')
     driver.find_element(By.NAME, 'password').send_keys('admin123' + Keys.ENTER)
     time.sleep(3)
 
-def Masuk_Menu_Recruitment(driver):
+    # Masuk_Menu_Recruitment 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[5]/a').click()
     time.sleep(3)
 
-def Mencari_Candidates_menggunakan_Keywords_Benar(driver):
+    # Mencari_Candidates_menggunakan_Keywords_Benar 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/div/div[2]/div/div[2]/input').send_keys('Software Engineer')
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[4]/button[2]').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[4]/button[1]').click()
 
-def Mencari_Candidates_menggunakan_Keywords_Salah(driver):
+    # Mencari_Candidates_menggunakan_Keywords_Salah 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/div/div[2]/div/div[2]/input').send_keys('Test')
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[4]/button[2]').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[4]/button[1]').click()
 
-def Mencari_Employee_berdasarkan_rentang_waktu_yang_sesuai(driver):
+    # Mencari_Employee_berdasarkan_rentang_waktu_yang_sesuai 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/div/div[3]/div/div[2]/div/div/input').send_keys('2022-01-01')
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/div/div[4]/div/div[2]/div/div/input').send_keys('2023-12-31')
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[4]/button[2]').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[4]/button[1]').click()
 
-def Mencari_Employee_berdasarkan_waktu_yang_salah(driver):
+    # Mencari_Employee_berdasarkan_waktu_yang_salah 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/div/div[3]/div/div[2]/div/div/input').send_keys('2026-01-01')
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/div/div[4]/div/div[2]/div/div/input').send_keys('2023-12-31')
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[4]/button[2]').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[4]/button[1]').click()
 
-def Mencari_Employee_berdasarkan_waktu_yang_tidak_sesuai_format(driver):
+    # Mencari_Employee_berdasarkan_waktu_yang_tidak_sesuai_format 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/div/div[3]/div/div[2]/div/div/input').send_keys('Test')
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/div/div[4]/div/div[2]/div/div/input').send_keys('31-12-2023')
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[4]/button[2]').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[4]/button[1]').click()
 
-def Menampilkan_data_Candidates_tanpa_memasukkan_input_apapun(driver):
+    # Menampilkan_data_Candidates_tanpa_memasukkan_input_apapun 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[4]/button[2]').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[4]/button[1]').click()
 
-def Menambahkan_Candidate_baru(driver):
+    # Menambahkan_Candidate_baru 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[1]/button').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div/div/div[2]/div[1]/div[2]/input').send_keys('Maria')
@@ -79,7 +79,7 @@ def Menambahkan_Candidate_baru(driver):
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[5]/a').click()
     time.sleep(3)
 
-def Menambahkan_Candidate_baru_tanpa_input_apapun(driver):
+    # Menambahkan_Candidate_baru_tanpa_input_apapun 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[1]/button').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[8]/button[2]').click()
@@ -87,18 +87,18 @@ def Menambahkan_Candidate_baru_tanpa_input_apapun(driver):
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[8]/button[1]').click()
     time.sleep(3)
 
-def Melihat_detail_data_Candidate(driver):
+    # Melihat_detail_data_Candidate 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div[1]/div/div[7]/div/button[1]').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[5]/a').click()
     time.sleep(3)
 
-def Menghapus_Candidate(driver):
+    # Menghapus_Candidate 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div[1]/div/div[7]/div/button[2]').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[3]/div/div/div/div[3]/button[2]').click()
     time.sleep(5)
 
-def Mengunduh_resume_Candidate(driver):
+    # Mengunduh_resume_Candidate 
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div[1]/div/div[7]/div/button[3]').click()
     time.sleep(3)
