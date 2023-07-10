@@ -13,18 +13,17 @@ def driver():
     yield driver
     driver.quit()
 
-def test(driver):
-    # Login
+def Login(driver):
     time.sleep(3)
     driver.find_element(By.NAME, 'username').send_keys('Admin')
     driver.find_element(By.NAME, 'password').send_keys('admin123' + Keys.ENTER)
     time.sleep(3)
 
-    # Masuk Menu Time
+def Masuk_Menu_Time(driver):
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[4]/a').click()
     time.sleep(3)
 
-    # Mengupdate Timesheet tanpa memasukkan input apapun
+def Mengupdate_Timesheet_tanpa_memasukkan_input_apapun(driver):
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div[1]/div/div[3]/div/button').click()
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/form/div[3]/div[2]/button').click()
